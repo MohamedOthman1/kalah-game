@@ -1,0 +1,39 @@
+    <div class="board-component" *ngIf="showBoard">
+   <div style="padding: 20px;" >
+    <div style="text-align: center;"><span>STATUS : {{game.status}}</span></div>
+    <div style="text-align: center;"><span>PLAYER TURN : {{game.nextPlayer}}</span></div>
+    <div style="text-align: center;" *ngIf="game.status != 'PLAYING'">
+        <div style="text-align: center;color: red;"><span>Congratulation {{game.winner}} !</span></div>
+        <button style="width: 100px;" type="button" class="btn btn-primary start-btn" 
+         (click)="StartAgain()">Start Again</button>
+    </div>
+   </div>
+  
+    <div class="board" >
+        
+        <div class="houseBoard">{{kalahPit[13].seeds}}</div>
+
+        <div class="pits">
+            <div class="row" fxLayoutGap="4px">
+                <div class="pit" (click)="move(13)">{{kalahPit[12].seeds}}</div>        
+                <div class="pit" (click)="move(12)">{{kalahPit[11].seeds}}</div>
+                <div class="pit" (click)="move(11)">{{kalahPit[10].seeds}}</div>
+                <div class="pit" (click)="move(10)">{{kalahPit[9].seeds}}</div>
+                <div class="pit" (click)="move(9)">{{kalahPit[8].seeds}}</div>
+                <div class="pit" (click)="move(8)">{{kalahPit[7].seeds}}</div>
+            </div>
+            
+            <div class="row">
+                <div class="pit" (click)="move(1)">{{kalahPit[0].seeds}}</div>
+                <div class="pit" (click)="move(2)">{{kalahPit[1].seeds}}</div>
+                <div class="pit" (click)="move(3)">{{kalahPit[2].seeds}}</div>
+                <div class="pit" (click)="move(4)">{{kalahPit[3].seeds}}</div>
+                <div class="pit" (click)="move(5)">{{kalahPit[4].seeds}}</div>
+                <div class="pit" (click)="move(6)">{{kalahPit[5].seeds}}</div>
+            </div>
+        </div>
+
+        <div class="houseBoard">{{kalahPit[6].seeds}}</div>
+        
+    </div>
+</div>
