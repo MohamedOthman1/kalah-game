@@ -11,7 +11,7 @@ In this project, I implemented repository pattern and SOLID principles. I've cre
 * `Swagger`.
 * `Lombok`.
 * `MySQL`, port 3306.
-### FrontEnd
+### Frontend
 * `Angular 13`, port 4200.
 * `Toastr Notification`.
 * `Typescript`.
